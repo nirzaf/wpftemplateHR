@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20623.1 VSUPREVIEW
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.Themes.Xbap", "HR.Themes.Xbap\HR.Themes.Xbap.csproj", "{F271010E-3B17-47CF-9ECD-C770949D653A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.Themes.Core", "..\HR.Themes.Base\HR.Themes.Core\HR.Themes.Core.csproj", "{D0447080-8D02-4958-835C-055CD642450C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.Themes.Prototype.WPF", "..\HR.Themes.Base\HR.Themes.Prototype.WPF\HR.Themes.Prototype.WPF.csproj", "{37C1111A-9818-48EA-ADC4-6F53FF12102A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HR.Themes.Fischer.WPF", "..\Themes\HR.Themes.Fischer.WPF\HR.Themes.Fischer.WPF.csproj", "{D8166AD7-25DD-4953-84DD-347CB0321582}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 1
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://highrobotics.visualstudio.com/defaultcollection
+		SccProjectUniqueName0 = ..\\HR.Themes.Base\\HR.Themes.Prototype.WPF\\HR.Themes.Prototype.WPF.csproj
+		SccProjectName0 = ../HR.Themes.Base/HR.Themes.Prototype.WPF
+		SccAuxPath0 = https://highrobotics.visualstudio.com/defaultcollection
+		SccLocalPath0 = ..\\HR.Themes.Base\\HR.Themes.Prototype.WPF
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F271010E-3B17-47CF-9ECD-C770949D653A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F271010E-3B17-47CF-9ECD-C770949D653A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F271010E-3B17-47CF-9ECD-C770949D653A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F271010E-3B17-47CF-9ECD-C770949D653A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0447080-8D02-4958-835C-055CD642450C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0447080-8D02-4958-835C-055CD642450C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0447080-8D02-4958-835C-055CD642450C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0447080-8D02-4958-835C-055CD642450C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37C1111A-9818-48EA-ADC4-6F53FF12102A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37C1111A-9818-48EA-ADC4-6F53FF12102A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37C1111A-9818-48EA-ADC4-6F53FF12102A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37C1111A-9818-48EA-ADC4-6F53FF12102A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8166AD7-25DD-4953-84DD-347CB0321582}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8166AD7-25DD-4953-84DD-347CB0321582}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8166AD7-25DD-4953-84DD-347CB0321582}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8166AD7-25DD-4953-84DD-347CB0321582}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

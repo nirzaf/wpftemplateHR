@@ -1,0 +1,210 @@
+﻿<UserControl x:Class="HR.Themes.Prototype.WPF.MainWindow_UC"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        >
+    <Grid Background="#FFEEEEEE">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Menu>
+            <MenuItem Header="_File">
+                <MenuItem Header="_Change theme" Command="{Binding ThemeCommand}"/>
+				<MenuItem Header="_Recent files">
+					<MenuItem Header="C:\Program files\File1" />
+					<MenuItem Header="C:\Program files\File2" />
+				</MenuItem>
+                <Separator/>
+                <MenuItem Header="_Exit" Command="{Binding ExitCommand}"/>
+            </MenuItem>
+			<MenuItem Header="_Edit">
+				  <MenuItem Header="Cut" Command="ApplicationCommands.Cut">
+					<MenuItem.Icon>
+						<Image Height="16" Width="16" Source="Properties/clipboard_cut.png" Stretch="Fill" />
+					</MenuItem.Icon></MenuItem>
+				  <MenuItem Header="Copy" Command="ApplicationCommands.Copy"/>
+			      <MenuItem Header="Paste" Command="ApplicationCommands.Paste"/>
+			     
+			</MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About" Command="{Binding AboutCommand}"/>
+            </MenuItem>
+        </Menu>
+
+        <TabControl Margin="10" Grid.Row="1">
+            <TabControl.Resources>
+                <XmlDataProvider x:Key="Persons" XPath="/Persons/*">
+                    <x:XData>
+                        <Persons xmlns="">
+                            <Person Lastname="Green" Name="Rachel" Age="17" Sms="True" />
+                            <Person Lastname="Geller" Name="Monica" Age="17" Sms="True" />
+                            <Person Lastname="Buffay" Name="Phoebe" Age="17" Sms="False" />
+                            <Person Lastname="Tribbiani" Name="Joey" Age="18" Sms="True" />
+                            <Person Lastname="Bing" Name="Chandler " Age="18" Sms="False" />
+                            <Person Lastname="Geller" Name="Ross " Age="18" Sms="True" />
+                        </Persons>
+                    </x:XData>
+                </XmlDataProvider>
+            </TabControl.Resources>
+            <TabItem Header="Person">
+                <Grid Margin="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+						
+                        
+                    </Grid.RowDefinitions>
+
+                    <Label Content="_Lastname:" HorizontalAlignment="Right" />
+                    <TextBox Grid.Column="1" Margin="2" />
+
+                    <Label Content="_Name:" Grid.Row="1" HorizontalAlignment="Right" />
+                    <TextBox Grid.Column="1" Grid.Row="1"  Margin="2" />
+
+                    <Label Content="_Birthdate:" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,1.02" />
+                    <DatePicker Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="1.999,2,0,2" />
+
+                    <Label Content="_Sex:" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                    <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="0,5.5">
+                        <RadioButton Content="Male" IsChecked="True" />
+                        <RadioButton Content="Female" Margin="10,0"/>
+                    </StackPanel>
+
+                    <Label Content="_Photo:" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                    <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="4" Margin="0,8,0,8">
+                        <ProgressBar Height="14" IsIndeterminate="True" />
+                        <TextBlock Text="loading" Foreground="Gray" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="9.333"/>
+                    </StackPanel>
+
+					<Label Content="_Weight:" Grid.Row="5" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                    <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="5" Margin="3,3,3,10">
+                        <Slider x:Name="sldWeight" Maximum="150" Minimum="1" TickPlacement="BottomRight" TickFrequency="5" />
+                        <TextBlock Text="{Binding Value, ElementName=sldWeight, StringFormat={}{0:#.#}, Mode=OneWay}" Foreground="Gray" VerticalAlignment="Top" HorizontalAlignment="Center" />
+                    </StackPanel>
+
+						<Label Content="Previous _persons:" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+						<DataGrid HorizontalAlignment="Left" Grid.Row="6" Grid.Column="1"							 
+							 ItemsSource="{Binding Source={StaticResource Persons}}" AutoGenerateColumns="False">
+							
+						<DataGrid.Columns>
+							<DataGridTextColumn Header="Name" Binding="{Binding XPath=@Name}" />
+							<DataGridTextColumn Header="Lastname" Binding="{Binding XPath=@Lastname}"  />				
+							<DataGridTextColumn Header="Age" Binding="{Binding XPath=@Age}" />
+							<DataGridCheckBoxColumn Header="Send sms" Binding="{Binding XPath=@Sms}" />
+						</DataGrid.Columns>
+					</DataGrid>
+					
+                </Grid>
+            </TabItem>
+            <TabItem Header="Contacts" Height="23.96" VerticalAlignment="Top">
+                <Grid Margin="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Count_ry:" HorizontalAlignment="Right" />
+                    <ComboBox x:Name="cmbCountries" Grid.Column="1" Margin="2" ItemsSource="{Binding Countries}"
+                              SelectedIndex="0" DisplayMemberPath="Name"/>
+
+                    <Label Content="_City:" Grid.Row="1" HorizontalAlignment="Right" />
+                    <ComboBox Grid.Column="1" Grid.Row="1" Margin="2" 
+                              SelectedIndex="0" DisplayMemberPath="Name"
+							  IsEditable="True"
+							  MaxDropDownHeight="120"
+                              ItemsSource="{Binding ElementName=cmbCountries, Path=SelectedItem.Cities}" />
+
+							  
+                    <Label Content="_Address:" Grid.Row="2" HorizontalAlignment="Right" />
+                    <TextBox Margin="2" Grid.Column="1" Grid.Row="2"  />
+
+                    <Label Content="Send _documents:" Grid.Row="3" HorizontalAlignment="Right" />
+                    <ListBox Margin="2" Grid.Column="1" Grid.Row="3">
+                        <ListBox.Items>
+                            <ListBoxItem Content="None"  IsSelected="True"/>
+                            <ListBoxItem Content="Twice a week"/>
+                            <ListBoxItem Content="Every week"/>
+                            <ListBoxItem Content="Once a month"/>
+                        </ListBox.Items>
+                    </ListBox>
+
+
+                    <Label Content="_Phone:" Grid.Row="4" HorizontalAlignment="Right" />
+                    <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="4" >
+                        <TextBox Margin="2" Width="140" />
+                        <CheckBox Content="Send SMS" />
+                    </StackPanel>
+
+
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Identity">
+                <Grid Margin="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="_User:" HorizontalAlignment="Right"/>
+                    <TextBox Grid.Column="1" Margin="2"/>
+
+                    <Label Content="_Password:" Grid.Row="1" HorizontalAlignment="Right"/>
+                    <PasswordBox Grid.Column="1" Grid.Row="1" Margin="2"/>
+
+                    <Label Content="_Role:" Grid.Row="2" HorizontalAlignment="Right"/>
+                    <Grid Grid.Column="1" Grid.Row="2">
+                        <TreeView Margin="2">
+                            <TreeViewItem Header="Staff" IsExpanded="True">
+                                <TreeViewItem Header="Administrator" IsSelected="True"/>
+                                <TreeViewItem Header="Head of department"/>
+                                <TreeViewItem Header="Employee"/>
+                            </TreeViewItem>
+                            <TreeViewItem Header="Partner">
+                                <TreeViewItem Header="Administrator"/>
+                                <TreeViewItem Header="Head of department"/>
+                                <TreeViewItem Header="HR specialist"/>
+                                <TreeViewItem Header="Employee"/>
+                            </TreeViewItem>
+                        </TreeView>
+                    </Grid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Padding="20,3"> <Hyperlink Command="{Binding ThemeCommand}">Switch theme</Hyperlink></TextBlock>
+            <StackPanel Orientation="Horizontal" Grid.Column="1"  HorizontalAlignment="Right" Margin="10,0,10,10">
+                <Button Content="OK" IsDefault="True" Margin="5,0,0,0"  Command="{Binding OkCommand}"/>
+                <Button Content="Cancel"  Margin="5,0,0,0" Command="{Binding ExitCommand}"/>
+            </StackPanel>
+        </Grid>
+      
+    </Grid>
+</UserControl>

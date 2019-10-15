@@ -1,0 +1,14 @@
+﻿<Page x:Class="HR.Themes.Xbap.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:prototype="clr-namespace:HR.Themes.Prototype.WPF;assembly=HR.Themes.Prototype.WPF"      
+      Title="Style application - www.HighRobotics.com"
+      Height="450" Width="450">
+    <Grid>
+        <Border BorderThickness="1" BorderBrush="Black">
+            <prototype:MainWindow_UC />
+        </Border>
+    </Grid>
+</Page>

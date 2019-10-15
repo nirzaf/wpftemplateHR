@@ -1,0 +1,11 @@
+C:\Users\Nirzaf\Downloads\WPF Themes\sourceCode\WPF\HR.Themes.Base\HR.Themes.Core\bin\Debug\HR.Themes.Core.dll
+C:\Users\Nirzaf\Downloads\WPF Themes\sourceCode\WPF\HR.Themes.Base\HR.Themes.Core\bin\Debug\HR.Themes.Core.pdb
+C:\Users\Nirzaf\Downloads\WPF Themes\sourceCode\WPF\HR.Themes.Base\HR.Themes.Core\bin\Debug\HR.Themes.Core.Light.dll
+C:\Users\Nirzaf\Downloads\WPF Themes\sourceCode\WPF\HR.Themes.Base\HR.Themes.Core\bin\Debug\HR.Themes.Core.Light.pdb
+C:\Users\Nirzaf\Downloads\WPF Themes\sourceCode\WPF\HR.Themes.Base\HR.Themes.Core\obj\Debug\HR.Themes.Core.csprojAssemblyReference.cache
+C:\Users\Nirzaf\Downloads\WPF Themes\sourceCode\WPF\HR.Themes.Base\HR.Themes.Core\obj\Debug\HR.Themes.Core.Properties.Resources.resources
+C:\Users\Nirzaf\Downloads\WPF Themes\sourceCode\WPF\HR.Themes.Base\HR.Themes.Core\obj\Debug\HR.Themes.Core.csproj.GenerateResource.cache
+C:\Users\Nirzaf\Downloads\WPF Themes\sourceCode\WPF\HR.Themes.Base\HR.Themes.Core\obj\Debug\HR.Themes.Core.csproj.CoreCompileInputs.cache
+C:\Users\Nirzaf\Downloads\WPF Themes\sourceCode\WPF\HR.Themes.Base\HR.Themes.Core\obj\Debug\HR.Themes.Core.csproj.CopyComplete
+C:\Users\Nirzaf\Downloads\WPF Themes\sourceCode\WPF\HR.Themes.Base\HR.Themes.Core\obj\Debug\HR.Themes.Core.dll
+C:\Users\Nirzaf\Downloads\WPF Themes\sourceCode\WPF\HR.Themes.Base\HR.Themes.Core\obj\Debug\HR.Themes.Core.pdb

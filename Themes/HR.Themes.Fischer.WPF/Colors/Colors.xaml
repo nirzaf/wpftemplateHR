@@ -1,0 +1,30 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero">
+	
+	<Color x:Key="GrayLight">#FFD6D6D6</Color> 
+	<Color x:Key="GrayDark">#FF494949</Color>
+	<Color x:Key="GrayMiddle">Gray</Color>
+	<Color x:Key="White">White</Color> 
+	<Color x:Key="Black">Black</Color> 
+	<SolidColorBrush x:Key="Transparent" Color="Transparent"/> 
+	<SolidColorBrush x:Key="WhiteBrush" Color="White"/>
+	<SolidColorBrush x:Key="BlackBrush" Color="Black"/>
+	<SolidColorBrush x:Key="GrayLightBrush" Color="{StaticResource GrayLight}" />
+	<SolidColorBrush x:Key="GrayDarkBrush" Color="{StaticResource GrayDark}" />
+	<SolidColorBrush x:Key="GrayMiddleBrush" Color="{StaticResource GrayMiddle}" />
+	<LinearGradientBrush x:Key="OuterBorderBrushStyle" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#FF585858" Offset="1"/>
+		<GradientStop Color="#FF545454"/>
+		<GradientStop Color="#FF7E7E7E" Offset="0.5"/>
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="WhiteToTransparent" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="White" Offset="0"/>
+		<GradientStop Offset="1"/>
+	</LinearGradientBrush>
+	<RadialGradientBrush x:Key="LighteningRadialBrush" RadiusY="0.3" RadiusX="0.7" Center="0.5,1" GradientOrigin="0.5,1">
+		<GradientStop Offset="1" />
+		<GradientStop Color="#E5FFFFFF"/>
+	</RadialGradientBrush>
+	
+</ResourceDictionary>

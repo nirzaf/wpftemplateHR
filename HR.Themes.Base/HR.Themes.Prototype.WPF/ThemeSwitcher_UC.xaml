@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="HR.Themes.Prototype.WPF.ThemeSwitcher_UC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"             
+             Background="Black"
+             Width="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <Style TargetType="{x:Type ListBoxItem}" BasedOn="{x:Null}"/>
+            <Style TargetType="{x:Type ListBox}" BasedOn="{x:Null}"/>
+            <Style TargetType="{x:Type Button}" BasedOn="{x:Null}"/>
+        </Grid.Resources>
+       
+        <Label Content="_Theme:" HorizontalAlignment="Right" Foreground="White"/>
+        <ListBox Grid.Column="1" ItemsSource="{Binding Themes}" SelectedItem="{Binding SelectedTheme}" MinHeight="20"
+                 Margin="2" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Background="Transparent">
+                        <TextBlock VerticalAlignment="Center" TextAlignment="Center" Text="{Binding Name}" Margin="2"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Label Content="_Color:" Grid.Row="1" HorizontalAlignment="Right"  Foreground="White"/>        
+        <ListBox Grid.Row="1" Grid.Column="1" ItemsSource="{Binding SelectedTheme.Colors}" SelectedItem="{Binding SelectedColor}" MinHeight="20"
+                 Margin="2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Border CornerRadius="5" BorderBrush="Black" Background="{Binding Color}"
+                                BorderThickness="1"
+                                Width="50" Margin="2"/>
+                        <TextBlock Margin="2" Text="{Binding Name}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Label Content="_Descriprion:" Grid.Row="2" HorizontalAlignment="Right" Margin="0,2,0,0"  Foreground="White"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding SelectedTheme.Description}"
+                   Margin="1,7,7,7" Foreground="White" TextWrapping="Wrap"/>
+        
+        <Button Content="OK" Command="{Binding OkCommand}"
+                HorizontalAlignment="Right" Grid.Row="3" Grid.ColumnSpan="2" Margin="0,6,10,12" Padding="20,2"/>
+    </Grid>
+</UserControl>

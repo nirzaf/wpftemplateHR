@@ -1,0 +1,55 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="Colors.xaml"/>
+	</ResourceDictionary.MergedDictionaries>
+	
+	<DrawingBrush x:Key="TileQuadroBrushGray" 
+		Viewport="0,0,6,6"
+		ViewportUnits="Absolute"	
+		 TileMode="Tile">
+      <DrawingBrush.Drawing>
+        <DrawingGroup>
+          <GeometryDrawing>
+            <GeometryDrawing.Geometry>
+              <GeometryGroup>
+                <RectangleGeometry Rect="0,0,3,3" />
+                <RectangleGeometry Rect="3,3,3,3" />
+              </GeometryGroup>
+            </GeometryDrawing.Geometry>
+            <GeometryDrawing.Brush>
+              <LinearGradientBrush>
+                <GradientStop Offset="0.0" Color="{StaticResource GrayDark}" />
+                <GradientStop Offset="1.0" Color="{StaticResource GrayDark}" />
+              </LinearGradientBrush>
+            </GeometryDrawing.Brush>
+          </GeometryDrawing>
+        </DrawingGroup>
+      </DrawingBrush.Drawing>
+    </DrawingBrush>
+	<DrawingBrush x:Key="TileQuadroBrushWhite" 
+		Viewport="0,0,6,6"
+		ViewportUnits="Absolute"	
+		TileMode="Tile">
+		<DrawingBrush.Drawing>
+			<DrawingGroup>
+				<GeometryDrawing>
+					<GeometryDrawing.Geometry>
+						<GeometryGroup>
+							<RectangleGeometry Rect="0,0,3,3" />
+							<RectangleGeometry Rect="3,3,3,3" />
+						</GeometryGroup>
+					</GeometryDrawing.Geometry>
+					<GeometryDrawing.Brush>
+						<LinearGradientBrush>
+							<GradientStop Offset="0.0" Color="{StaticResource White}" />
+							<GradientStop Offset="1.0" Color="{StaticResource White}" />
+						</LinearGradientBrush>
+					</GeometryDrawing.Brush>
+				</GeometryDrawing>
+			</DrawingGroup>
+		</DrawingBrush.Drawing>
+	</DrawingBrush>
+	
+</ResourceDictionary>

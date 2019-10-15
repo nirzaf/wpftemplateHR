@@ -1,0 +1,6 @@
+C:\Users\Nirzaf\Downloads\WPF Themes\sourceCode\WPF\HR.Themes.Base\HR.Themes.Core.Light\bin\Debug\HR.Themes.Core.Light.dll
+C:\Users\Nirzaf\Downloads\WPF Themes\sourceCode\WPF\HR.Themes.Base\HR.Themes.Core.Light\bin\Debug\HR.Themes.Core.Light.pdb
+C:\Users\Nirzaf\Downloads\WPF Themes\sourceCode\WPF\HR.Themes.Base\HR.Themes.Core.Light\obj\Debug\HR.Themes.Core.Light.csprojAssemblyReference.cache
+C:\Users\Nirzaf\Downloads\WPF Themes\sourceCode\WPF\HR.Themes.Base\HR.Themes.Core.Light\obj\Debug\HR.Themes.Core.Light.csproj.CoreCompileInputs.cache
+C:\Users\Nirzaf\Downloads\WPF Themes\sourceCode\WPF\HR.Themes.Base\HR.Themes.Core.Light\obj\Debug\HR.Themes.Core.Light.dll
+C:\Users\Nirzaf\Downloads\WPF Themes\sourceCode\WPF\HR.Themes.Base\HR.Themes.Core.Light\obj\Debug\HR.Themes.Core.Light.pdb

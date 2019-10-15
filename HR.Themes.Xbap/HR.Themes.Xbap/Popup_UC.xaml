@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="HR.Themes.Xbap.Popup_UC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             MinWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition MinHeight="100" />
+        </Grid.RowDefinitions>
+        <Border BorderBrush="Black" BorderThickness="1" CornerRadius="3" Grid.RowSpan="2" Background="White"/>
+        
+        <Grid Background="#FFB1B5B7" >
+            <TextBlock x:Name="tbltitle" HorizontalAlignment="Left" Margin="5" VerticalAlignment="Center"
+                       Foreground="White"/>
+            <Border Width="20" Height="20" HorizontalAlignment="Right"
+                    x:Name="CloseBorder"
+                    Background="#FF8F0505" CornerRadius="2" Margin="5" BorderThickness="1" BorderBrush="#FF4F0808" MouseDown="CloseBorder_MouseDown">
+            	<Grid>
+            		<Path Data="M0,0 L14.818499,15.109948" Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="16.11" Stretch="Fill" Stroke="#FFECECEC" VerticalAlignment="Center" Width="15.818" StrokeThickness="3"/>
+            		<Path Data="M0,0 L14.818499,15.109948" Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="16.11" Stretch="Fill" Stroke="#FFECECEC" VerticalAlignment="Center" Width="15.818" StrokeThickness="3" Margin="1.091,0.945" RenderTransformOrigin="0.5,0.5">
+            			<Path.RenderTransform>
+            				<TransformGroup>
+            					<ScaleTransform ScaleY="1" ScaleX="-1"/>
+            					<SkewTransform AngleY="0" AngleX="0"/>
+            					<RotateTransform Angle="0"/>
+            					<TranslateTransform/>
+            				</TransformGroup>
+            			</Path.RenderTransform>
+            		</Path>
+            		
+				</Grid>
+            </Border>
+        </Grid>
+        <Grid x:Name="childContent" Grid.Row="1"/>            </Grid>
+</UserControl>
